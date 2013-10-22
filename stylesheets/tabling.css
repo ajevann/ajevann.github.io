@@ -1,0 +1,16 @@
+#table {
+	display: table;
+}
+
+#row  {
+	display: table-row;
+}
+
+#left, #right, #middle {
+	display: table-cell;
+	float:left;
+     
+    padding: 20px;
+	height:200px;
+	width:200px;
+}
