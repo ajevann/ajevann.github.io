@@ -92,12 +92,13 @@ th {
 }
 
 img {
-  margin-left:auto;
-  margin-right:auto;
   max-width:100%;
 }
 
+img section {
   margin:auto;
+}
+
 header {
   width:230px;
   float:left;
