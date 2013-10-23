@@ -93,10 +93,19 @@ th {
 
 img {
   max-width:100%;
+  display: block;
+  position: relative;
+  margin: auto;
+  padding-bottom: 10px;
 }
 
-img section {
-  margin:auto;
+#row img {
+  display: block;
+  margin: auto;
+  padding-bottom: 10px;
+
+  clip: rect(0, 200px, 200px, 0);
+  position: absolute;
 }
 
 header {
