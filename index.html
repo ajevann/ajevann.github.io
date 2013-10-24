@@ -7,23 +7,28 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+    $(document).ready(function(){
+      $("#header").load("header.html");
+    });
+    </script>
+
+
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <h1>Alex Vann</h1>
-        <p></p>
-
-        <p class="view"><a href="https://github.com/ajevann">View My GitHub Profile</a></p>
-        <p class="view"><a href="about.html">About</a></p>
-        <p class="view"><a href="#">Projects</a></p>
-        <p class="view"><a href="resume.html">Resume</a></p>
-        <p class="view"><a href="http://ajevann.tumblr.com/">Blog</a></p>
-
+        <div id="header">
+        </div>
+        
       </header>
       <section>
           <h3>Projects & Work</h3>
