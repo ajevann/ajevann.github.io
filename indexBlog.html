@@ -11,6 +11,16 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <style type="css">
+        .data {
+          padding:50px;
+          font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+          color:#777;
+          font-weight:300;
+          margin: 0 0 20px;
+        }
+    </style>
+    
   </head>
   <body>
     <div class="wrapper">
@@ -27,18 +37,27 @@
 
       </header>
       <section>
-      <h3>Blog</h3>
+      {block:IndexPage}<h3>Blog</h3>{/block:IndexPage}
       {block:Posts}
+      <div{block:IndexPage}{block:Posts} 
+      style="border:1px solid #e5e5e5;
+            border-width:1px 0;
+            padding:20px 0;
+            margin:0 0 20px;"
+            {/block:Posts}{/block:IndexPage}{block:PermalinkPage}{/block:PermalinkPage}/> 
+      
         {block:Text}
           {block:IndexPage}
             {block:Title}
               <p><a href="{Permalink}" >{Title}</a></p>
+              <div id="date">{block:Date}{DayOfMonthWithZero} {ShortMonth} {ShortYear}{/block:Date}</div></br>
             {/block:Title}
             {Body}
           {/block:IndexPage}
           {block:PermalinkPage}
             {block:Title}
               <h3>{Title}</h3>
+              <div id="date">{block:Date}{DayOfMonthWithZero} {ShortMonth} {ShortYear}{/block:Date}</div></br>
             {/block:Title}
             {Body}
           {/block:PermalinkPage}
@@ -46,11 +65,12 @@
         
         {block:Link}
           <a href="{URL}" class="link" {Target}>{Name}</a>
+          <div id="date">{block:Date}{DayOfMonthWithZero} {ShortMonth} {ShortYear}{/block:Date}</div>
           {block:Description}
             {Description}
           {/block:Description}
         {/block:Link}
-          
+        
       {/block:Posts}
 
       </section>
