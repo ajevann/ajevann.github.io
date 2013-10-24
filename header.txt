@@ -1,0 +1,9 @@
+
+	<h1>Alex Vann</h1>
+	<p></p>
+
+	<p class="view"><a href="https://github.com/ajevann">View My GitHub Profile</a></p>
+	<p class="view"><a href="about.html">About</a></p>
+	<p class="view"><a href="#">Projects</a></p>
+	<p class="view"><a href="resume.html">Resume</a></p>
+	<p class="view"><a href="http://ajevann.tumblr.com/">Blog</a></p>
