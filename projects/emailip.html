@@ -44,39 +44,39 @@
         </p>
 
         <pre><code>
-time.sleep(60)
+          time.sleep(60)
 
-localtime = time.asctime( time.localtime(time.time()) ) 
+          localtime = time.asctime( time.localtime(time.time()) ) 
 
-s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-s.connect(("gmail.com",80))
-ip = s.getsockname()[0]
-s.close()
+          s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+          s.connect(("gmail.com",80))
+          ip = s.getsockname()[0]
+          s.close()
 
-msg = 'IP Address for iMac\n'
-msg += str(localtime)
-msg += '\n'
-msg += str(ip)
+          msg = 'IP Address for iMac\n'
+          msg += str(localtime)
+          msg += '\n'
+          msg += str(ip)
         </code></pre>
 
         <p>The next part was purely because after awhile I became annoyed with incessant emails when I was at home, so I simply decided to create/update a file in my dropbox that would contain the emails contents.</p>
 
         <pre><code>
-open('User/Dropbox/record/of/ipaddress.txt','w').close()
-f = open('User/Dropbox/record/of/ipaddress.txt', 'r+')
-f.write(msg)
+          open('User/Dropbox/record/of/ipaddress.txt','w').close()
+          f = open('User/Dropbox/record/of/ipaddress.txt', 'r+')
+          f.write(msg)
         </code></pre>
 
         <p>Lastly, I took the message's contents and created a connection to gmail's servers, logged in under my own email account, sent the message to myself, and closed everything up.</p>
 
         <pre><code>
-server = smtplib.SMTP('smtp.gmail.com',587) #port 465 or 587
-server.ehlo()
-server.starttls()
-server.ehlo()
-server.login('your@email.com','password')
-server.sendmail('you@email.com','your@email.com',msg)
-server.close()
+          server = smtplib.SMTP('smtp.gmail.com',587) #port 465 or 587
+          server.ehlo()
+          server.starttls()
+          server.ehlo()
+          server.login('your@email.com','password')
+          server.sendmail('you@email.com','your@email.com',msg)
+          server.close()
         </code></pre>
         
         <p>I still use this code everyday whenever I'm away from home. Absolutely useful to use the IP address to use Cyberduck or FileZilla and send/recieve files to and from my desktop to wherever I am. I know there are better options out there, this was simply a small project that helped solve an issue I had.</p>
