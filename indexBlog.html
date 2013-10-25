@@ -11,14 +11,13 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <style type="css">
-        .date {
-          padding:50px;
-          font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-          color:#777;
-          font-weight:300;
-          margin: 0 0 20px;
-        }
+    <style type="text/css">
+      #topBorder {
+        border-top:1px solid #e5e5e5;
+        border-width:1px 0;
+        padding:10px 0;
+        margin:0 0 20px;
+      }
     </style>
     
   </head>
@@ -39,37 +38,34 @@
       <section>
       {block:IndexPage}<h3>Blog</h3>{/block:IndexPage}
       {block:Posts}
-
       
         {block:Text}
-          <div style="border-top:1px solid #e5e5e5;
-            border-width:1px 0;
-            padding:10px 0;
-            margin:0 0 20px;">
           {block:IndexPage}
-            {block:Title}
-              <p><a href="{Permalink}" >{Title}</a></p>
-              <div id="date">{block:Date}{DayOfMonthWithZero} {ShortMonth} {ShortYear}{/block:Date}</div></br>
-            {/block:Title}
-            {Body}
-          {/block:IndexPage}</div>
+            <div id="topBorder">
+              {block:Title}
+                <p><a href="{Permalink}" >{Title}</a></br>
+                {block:Date}{DayOfMonthWithZero} {ShortMonth} {ShortYear}{/block:Date}</p>
+              {/block:Title}
+              {Body}
+            </div>
+          {/block:IndexPage}
           {block:PermalinkPage}
             {block:Title}
-              <h3>{Title}</h3>
-              <div id="date">{block:Date}{DayOfMonthWithZero} {ShortMonth} {ShortYear}{/block:Date}</div></br>
+              <h3>Blog</h3>
+              <div id="topBorder">
+              <p><a href="{Permalink}" >{Title}</a></br>
+              {block:Date}{DayOfMonthWithZero} {ShortMonth} {ShortYear}{/block:Date}</p>
             {/block:Title}
             {Body}
+            </div>
           {/block:PermalinkPage}
         {/block:Text}
         
         {block:Link}        
-          <div style="border-top:1px solid #e5e5e5;
-            border-width:1px 0;
-            padding:10px 0;
-            margin:0 0 20px;">
+        <div id="topBorder">
           {block:IndexPage}
-            <a href="{URL}" class="link" {Target}>{Name}</a>
-            <div id="date">{block:Date}{DayOfMonthWithZero} {ShortMonth} {ShortYear}{/block:Date}</div>
+            <p><a href="{URL}" class="link" {Target}>{Name}</a></br>
+            {block:Date}{DayOfMonthWithZero} {ShortMonth} {ShortYear}{/block:Date}</p>
             {block:Description}
               {Description}
             {/block:Description}
