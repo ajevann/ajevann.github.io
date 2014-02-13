@@ -2,3 +2,10 @@ body {
   padding: 0px !important;
   margin: 0px !important;
 }
+
+iframe {
+  width:700px;
+  height:100%;
+  float:right;
+  padding-bottom:50px;
+}
