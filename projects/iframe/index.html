@@ -19,9 +19,11 @@
     </style>
 
     <script type="text/javascript">
-      $(document).ready(function(){
-        $( "#myContent" ).load( "about.html");
-      });
+      function redirect(source) {
+        $(document).ready(function(){
+          $( "#contentViewer" ).load( source );
+        });
+      }
     </script>
 
   </head>
@@ -36,14 +38,14 @@
         <p class="view"><a href="../../index.html"><strong>Homepage</strong></a></p>
         <p><br></p>
         <p class="view"><a href="">View My GitHub Profile</a></p>
-        <p class="view"><a href="about.html" target="contentiFrame">About</a></p>
-        <p class="view"><a href="projects.html" target="contentiFrame">Projects</a></p>
+        <p class="view"><a href="" onclick="redirect('about.html')">About</a></p>
+        <p class="view"><a href="" onclick="redirect('projects.html')">Projects</a></p>
         <p class="view"><a href="resume.html" target="contentiFrame">Resume</a></p>
         <p class="view"><a href="" target="contentiFrame">Blog</a></p> 
       </header>
 
       <section>
-        <div id="myContent"></div>
+        <div id="contentViewer"></div>
       </section>
 
       <footer>
