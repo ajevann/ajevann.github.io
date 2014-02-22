@@ -8,7 +8,7 @@
 
 <p>Sure.<br>How easy is it? In my experience, I've found it pretty unrelated.</p>
 
-<p>I started thinking about this problem when trying to add some PHP to this very site as a means of keeping headers, navigation, footers, and just about anything I wanted to keep consistent through out the site. But since my site is hosted by Github, and since <a href="http://stackoverflow.com/questions/10837946/how-to-publish-php-page-instead-of-html-at-github-to-demo-some-php-content#answers-header" target='_top'>Github does not support PHP</a> (as far as I could tell), I wanted to see if there was an alternative solution.</p>
+<p>I started thinking about this problem when trying to add some PHP to this very site as a means of keeping headers, navigation, footers, and just about anything I wanted to keep consistent through out the site. But since my site is hosted by Github, and since <a href="http://stackoverflow.com/questions/10837946/how-to-publish-php-page-instead-of-html-at-github-to-demo-some-php-content#answers-header" target='_top'>Github does not support PHP</a> (as far as I could tell), I wanted to see if there was an alternative solution. Truth be told, I'll probably keep my site structured in the traditional sense (each page has all the content it needs) so instead I've set up a dummy version of my site to showcase what I mean.</p>
 
 <p>Issues I've encountered so far:
 	<li>Styling is a bit of a mess if you're adding on to an existing site.</li>
@@ -16,21 +16,6 @@
 	<li><code>allow-top-navigation</code> hasn't been working. (Turns out all I needed to do was to add <code>target='_top'</code> to the link)</li>
 	<li>Refreshing the page causes to navigate back to the index page, i.e. loses the inner iframe content.</li>
 </p>
-
-<table border="0"><tr>
-	<td>
-		<pre><code>
-index.html
-about.html
-		</code></pre>	
-	</td>
-	<td>
-		<pre><code>
-index.html
-about.html
-		</code></pre>	
-	</td>
-</tr></table>
 
 <p></p>
 
