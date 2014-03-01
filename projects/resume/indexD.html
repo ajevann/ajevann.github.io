@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resume Matrix Experiment</title>
+
+    <link rel="stylesheet" href="../../stylesheets/styles.css">
+
+	<script type="text/javascript" language="javascript" src="js/jquery-1.10.2.min.js"></script>
+
+	<style type="text/css">
+		#jobs {
+			position:relative;
+			float:right;
+
+			width:600px;
+			height:100%;
+
+		}
+
+		#button {
+			position:relative;
+			float:left;
+
+			width:200px;
+			height:100%;
+		}
+
+		#container {
+			width:800px;
+		}
+
+		.circle {
+			border:2px solid;
+			border-radius:90px;
+
+			height:50px;
+			width: 50px;
+
+			margin:auto;
+			margin-top:20px;
+		}
+	</style>
+
+	<script>
+		hideall();
+
+		$( document ).ready(function() {
+			$("#job1b").css('cursor', 'pointer').click(function() {
+				hideall("#job1b");
+				$("#job1").show().fadeIn( 1000 );
+			});
+
+			$("#job2b").css('cursor', 'pointer').click(function() {
+				hideall("#job3b");
+				$("#job2").show().fadeIn( 1000 );
+			});
+
+			$("#job3b").css('cursor', 'pointer').click(function() {
+				hideall("#job3b");
+				$("#job3").show().fadeIn( 1000 );
+			});
+
+			$("#job4b").css('cursor', 'pointer').click(function() {
+				hideall("#job4b");
+				$("#job4").show().fadeIn( 1000 );
+			});
+
+			$("#job5b").css('cursor', 'pointer').click(function() {
+				hideall("#job5b");
+				$("#job5").show().fadeIn( 1000 );
+			});
+		});
+
+		function hideall() {
+			$("#job1").hide(1000);
+			$("#job2").hide(1000);
+			$("#job3").hide(1000);
+			$("#job4").hide(1000);
+			$("#job5").hide(1000);
+		}
+	</script>
+
+</head>
+<body>
+      
+	<div style="padding-bottom: 40px;"><h3>Resume Matrix Experiment</h3>
+		<p><a href="index.html">Project Page</a><br/>
+		<a href="../../index.html">Home</a></p>
+	</div>
+
+	<div id="container">
+		<div id="button">
+			<div class="circle" id="job1b"></div>
+			<div class="circle" id="job2b"></div>
+			<div class="circle" id="job3b"></div>
+			<div class="circle" id="job4b"></div>
+			<div class="circle" id="job5b"></div>
+		</div>
+
+		<div id="jobs">
+			<div id="job1">
+				<p><b>Web Content Specialist</b>, Bon Secours Richmond Health System
+				</br>Richmond, Virginia, October 2013 - <i>present</i>
+				</br>- On contract with Apex Systems to Bon Secours to assist with their intranet migration to a Microsoft Sharepoint based model.
+				</br>- Worked with a team to redesign and redevelop obsolete and inconsistent intranet designs for eleven Bon Secours hospitals to a newer and more coherent implementation focused on consolidating design throughout the company's separate intranets.
+				</br>- Worked with a variety of tools to programatically migrate existing wikis from third party sites to a centralized location.</p>
+			</div>
+
+			<div id="job2">
+				<p><b>Researcher and Support Debugger</b>, "Structure Form and Analysis System" Software, <a href="http://legacy.caus.vt.edu/setareh/archresearch/">SAFAS Homepage</a>
+				</br>Blacksburg, Virginia, October 2011 - January 2012
+				</br>- Provided feedback to development process, including website layout and implementation.
+				</br>- Coordinated students from Hampton University and Illinois University using the software for their architecture classes. Provided trouble shooting support for students.</p>
+			</div>
+
+			<div id="job3">
+				<p><b>Junior Software Developer</b>, Northrop Grumman Mission Systems, <a href="http://www.northropgrumman.com/Capabilities/ePOWER/Pages/default.aspx">e.POWER - Business Process Management</a> 
+				</br>Chantilly, Virginia, June 2009 - January 2010, May 2010 - May 2011
+				</br>- Performed entry level duties as a junior software developer for Northrop Grumman's Business Solutions group, tasked with creating integral parts of their ePower business workflow solution.
+				</br>- Worked directly with and preformed the same duties as regular Northrop Grumman employees creating several front end applications for the product as well as database communications.</p>
+			</div>
+
+			<div id="job4">
+				<p><i>Group Projects</i>:
+				</br><b>Researcher and Designer</b>, Design of Information Capstone Project, <a href="./projects/2011CS4634.html">Project Page</a>
+				</br>Blacksburg, Virginia, August 2011 - December 2011
+				</br>- Designed and submitted an interactive information display system for Virginia Tech’s new research center in Arlington, Virginia.
+				</br>- The product implemented Bluetooth and RFID technology to display user specific information on a hallway display. The program also provided back end customizing using PHP.</p>
+			</div>
+
+			<div id="job5">
+				<p><b>Researcher and Testing Partner</b>, Human Computer Interaction Design Project, <a href="./projects/2011CS3724.html">Project Page</a>
+				</br>Blacksburg, Virginia, January 2011 - May 2011
+				</br>- Created a scoring system for basketball games designed to optimize the recording process while simultaneously cutting back on user errors during input.
+				</br>- Used Apple IOS technologies to create an iPad application in order to make use of the touch screen potential and the portability that it could offer.</p>
+			</div>
+		</div>
+
+		<div id="details">
+			<div id="job1">
+			</div>
+
+			<div id="job2">
+			</div>
+
+			<div id="job3">
+			</div>
+
+			<div id="job4">
+			</div>
+
+			<div id="job5">
+			</div>
+		</div>
+	</div<
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resume Matrix Experiment</title>
+
+	<link rel="stylesheet" href="../../stylesheets/styles.css">
+
+	<script type="text/javascript" language="javascript" src="js/jquery-1.10.2.min.js"></script>
+
+	<style type="text/css">
+
+		table {
+			margin: auto;
+			position: relative;
+		}
+
+		th {
+			text-align: center;
+			padding: 10px;
+		}
+
+		td {
+			padding: 10px;
+		}
+	</style>
+
+	<script>
+		$( document ).ready(function() {
+			$(".java").click(function() {
+				$("#job1").fadeTo(1000, 1);
+				$("#job2").fadeTo(1000, 1);
+				$("#job3").fadeTo(1000, 1);
+				$("#job4").fadeTo(1000, 0.1);
+				$("#job5").fadeTo(1000, 0.1);
+			});
+
+			$(".csharp").click(function() {
+				$("#job1").fadeTo(1000, 0.1);
+				$("#job2").fadeTo(1000, 1);
+				$("#job3").fadeTo(1000, 1);
+				$("#job4").fadeTo(1000, 0.1);
+				$("#job5").fadeTo(1000, 1);
+			});
+
+			$(".js").click(function() {
+				$("#job1").fadeTo(1000, 1);
+				$("#job2").fadeTo(1000, 0.1);
+				$("#job3").fadeTo(1000, 1);
+				$("#job4").fadeTo(1000, 1);
+				$("#job5").fadeTo(1000, 1);
+			});
+		});
+	</script>
+
+</head>
+<body>
+      
+	<div style="padding-bottom: 40px;"><h3>Resume Matrix Experiment</h3>
+		<p><a href="index.html">Project Page</a><br/>
+		<a href="../../index.html">Home</a></p>
+	</div>
+
+	<table width="100%" border="1">
+
+		<col width="25%"/>
+		<col width="60%"/>
+		<col width="15%"/>
+
+		<tr>
+			<th>Job / Project</th>
+			<th>Description</th>
+			<th>Languages Used</th> 
+		</tr>
+
+		<tr id="job1">
+			<td>Web Content Specialist</br>Bon Secours Richmond Health System</br>Richmond, Virginia, October 2013 - present</td>
+			<td>Praesent rhoncus ante massa, at viverra ante placerat eget. Curabitur et lobortis magna. Suspendisse mattis tempor commodo. Praesent placerat sapien arcu, a luctus nisl feugiat sit amet. Nunc quis aliquam odio. Duis id viverra dui. Fusce nec dolor id dolor cursus scelerisque vel id lorem. Nunc non arcu id enim sodales consectetur a ut turpis. Aliquam erat volutpat. Quisque ullamcorper arcu eu dignissim tincidunt. Pellentesque magna augue, aliquet vel lectus ut, aliquam convallis diam.</td>
+			<td>
+				<div class="btn-group">
+					<button class="btn java">Java</button></br>
+					<button class="btn js">Javascript</button></br>
+				</div>
+			</td>
+		</tr>
+
+		<tr id="job2"> 
+			<td>Web Content Specialist</br>Bon Secours Richmond Health System</br>Richmond, Virginia, October 2013 - present</td>
+			<td>Praesent rhoncus ante massa, at viverra ante placerat eget. Curabitur et lobortis magna. Suspendisse mattis tempor commodo. Praesent placerat sapien arcu, a luctus nisl feugiat sit amet. Nunc quis aliquam odio. Duis id viverra dui. Fusce nec dolor id dolor cursus scelerisque vel id lorem. Nunc non arcu id enim sodales consectetur a ut turpis. Aliquam erat volutpat. Quisque ullamcorper arcu eu dignissim tincidunt. Pellentesque magna augue, aliquet vel lectus ut, aliquam convallis diam.</td>
+			<td>
+				<div class="btn-group">
+					<button class="btn csharp">C#</button></br>
+					<button class="btn java">Java</button></br>
+				</div>
+			</td>
+		</tr>
+
+		<tr id="job3">
+			<td>Web Content Specialist</br>Bon Secours Richmond Health System</br>Richmond, Virginia, October 2013 - present</td>
+			<td>Praesent rhoncus ante massa, at viverra ante placerat eget. Curabitur et lobortis magna. Suspendisse mattis tempor commodo. Praesent placerat sapien arcu, a luctus nisl feugiat sit amet. Nunc quis aliquam odio. Duis id viverra dui. Fusce nec dolor id dolor cursus scelerisque vel id lorem. Nunc non arcu id enim sodales consectetur a ut turpis. Aliquam erat volutpat. Quisque ullamcorper arcu eu dignissim tincidunt. Pellentesque magna augue, aliquet vel lectus ut, aliquam convallis diam.</td>
+			<td>
+				<div class="btn-group">
+					<button class="btn csharp">C#</button></br>
+					<button class="btn java">Java</button></br>
+					<button class="btn js">Javascript</button></br>
+				</div>
+			</td>
+		</tr>
+
+		<tr id="job4">
+			<td>Web Content Specialist</br>Bon Secours Richmond Health System</br>Richmond, Virginia, October 2013 - present</td>
+			<td>Praesent rhoncus ante massa, at viverra ante placerat eget. Curabitur et lobortis magna. Suspendisse mattis tempor commodo. Praesent placerat sapien arcu, a luctus nisl feugiat sit amet. Nunc quis aliquam odio. Duis id viverra dui. Fusce nec dolor id dolor cursus scelerisque vel id lorem. Nunc non arcu id enim sodales consectetur a ut turpis. Aliquam erat volutpat. Quisque ullamcorper arcu eu dignissim tincidunt. Pellentesque magna augue, aliquet vel lectus ut, aliquam convallis diam.</td>
+			<td>
+				<div class="btn-group">
+					<button class="btn js">Javascript</button></br>
+				</div>
+			</td>
+		</tr>
+
+		<tr id="job5">
+			<td>Web Content Specialist</br>Bon Secours Richmond Health System</br>Richmond, Virginia, October 2013 - present</td>
+			<td>Praesent rhoncus ante massa, at viverra ante placerat eget. Curabitur et lobortis magna. Suspendisse mattis tempor commodo. Praesent placerat sapien arcu, a luctus nisl feugiat sit amet. Nunc quis aliquam odio. Duis id viverra dui. Fusce nec dolor id dolor cursus scelerisque vel id lorem. Nunc non arcu id enim sodales consectetur a ut turpis. Aliquam erat volutpat. Quisque ullamcorper arcu eu dignissim tincidunt. Pellentesque magna augue, aliquet vel lectus ut, aliquam convallis diam.</td>
+			<td>
+				<div class="btn-group">
+					<button class="btn csharp">C#</button></br>
+					<button class="btn js">Javascript</button></br>
+				</div>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workflow Status Matrix</title>
+
+  <link rel="stylesheet" href="../stylesheets/styles.css">
+
+  <script type="text/javascript" language="javascript" src="../javascripts/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" language="javascript" src="../javascripts/jquery-ui-1.9.2.custom.min.js"></script>
+
+  <style type="text/css">
+    #sortable { 
+      list-style-type: none; 
+      padding:5px;
+
+      height:100%;
+      width:100%;
+    }
+
+    #sortable li { 
+      margin:5px;
+      padding:5px;
+
+      border:1px solid;
+      border-radius:10px;
+    }
+
+    .red { background-color: #e74c3c }
+    .green { background-color: #2ecc71 }
+    .yellow { background-color: #f1c40f }
+    .white { background-color: #bdc3c7 }
+
+    #container {
+      width:800px;
+      height: 100%;
+      margin: auto;
+    }
+  </style>
+
+  <script type="text/javascript">
+    $( document ).ready(function() {
+
+      /*
+      $("#task1").css('cursor', 'pointer').click(function() {
+        $("#task1").fadeOut( 1000 );
+      });
+
+      $("li").click(function(event) {
+        alert(event.target.id);
+      });
+      */
+
+      $(function() {
+        $( "#sortable, #sortable" ).sortable({
+          connectWith: ".connectedSortable"
+        }).disableSelection();
+      });
+
+    });
+  </script>
+
+</head>
+<body>
+      
+  <div style="padding-bottom: 40px;"><h3>Workflow Status Matrix</h3>
+    <p><a href="../index.html">Home</a><br/>
+    EXPLAIN THIS HERE NOW TODAY</p>
+  </div>
+
+  <div id="container">
+    <table border="1">
+      <col width="8%"/>
+      <col width="23%"/>
+      <col width="23%"/>
+      <col width="23%"/>
+      <col width="23%"/>
+
+      <tr>
+        <td></td>
+        <td>Reviewing</td>
+        <td>Developing</td>
+        <td>Testing</td>
+        <td>Deploying</td>
+      </tr>
+
+      <tr>
+        <td>John</td>
+        <td>
+          <ul id="sortable" class="connectedSortable">
+            <li id="task1" class="red">Item 1</li>
+          </ul>
+        </td>
+        <td>
+          <ul id="sortable" class="connectedSortable">
+            <li id="task2" class="red">Item 1</li>
+          </ul>
+        </td>
+        <td>
+          <ul id="sortable" class="connectedSortable">
+          </ul>
+        </td>
+        <td>
+          <ul id="sortable" class="connectedSortable">
+            <li id="task3" class="white">Item 1</li>
+            <li id="task4" class="green">Item 2</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Jane</td>
+        <td>
+          <ul id="sortable" class="connectedSortable"></ul>
+        </td>
+        <td>
+          <ul id="sortable" class="connectedSortable"></ul>
+        </td>
+        <td>
+          <ul id="sortable" class="connectedSortable">
+            <li id="task5" class="green">Item 2</li>
+          </ul>
+        </td>
+        <td>
+          <ul id="sortable" class="connectedSortable">
+            <li id="task6" class="yellow">Item 2</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Rachel</td>
+        <td>
+          <ul id="sortable" class="connectedSortable"></ul>
+        </td>
+        <td>
+          <ul id="sortable" class="connectedSortable">
+            <li id="task7" class="red">Item 2</li>
+            <li id="task8" class="yellow">Item 2</li>
+          </ul>
+        </td>
+        <td>
+          <ul id="sortable" class="connectedSortable"></ul>
+        </td>
+        <td>
+          <ul id="sortable" class="connectedSortable"></ul>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Dan</td>
+        <td>
+          <ul id="sortable" class="connectedSortable">
+            <li id="task9" class="white">Item 2</li>
+          </ul>
+        </td>
+        <td>
+          <ul id="sortable" class="connectedSortable">
+            <li id="task10" class="green">Item 2</li>
+          </ul>
+        </td>
+        <td>
+          <ul id="sortable" class="connectedSortable"></ul>
+        </td>
+        <td>
+          <ul id="sortable" class="connectedSortable"></ul>
+        </td>
+      </tr>
+
+    </table>
+
+
+
+
+
+
+
+
+  </div>
+
+</body>
+</html>
+
