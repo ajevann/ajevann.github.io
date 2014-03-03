@@ -1,0 +1,47 @@
+Jan. 13
+	[ ] Migrate BSHR
+	[ ] Sweep Room
+	[ ] Pay last month's student loan
+	 O  Beagn the BSHR migration. Added the aspx pages and images. Still working on linking them (as of 1pm still has problems). Table of contents is set
+	 @  Have a drink with Laura this week
+	 O  Have coffee with Maggie this week
+
+Jan. 14
+	 O  Setup mint.com account so as to better manage my accounts
+	 O  Went to Ellwoods
+	 O  IRIS IS Wiki and other sites crashed
+
+Jan. 15
+	 O  Made dope as soup (v)
+	 O  Swept room (not yet but did clean it a bit)
+	 O  Aaron Grigsby stopped by and hung out for a bit.
+
+Jan. 16
+	[ ] Backup Wiki
+	[ ] Find temporary solution to wiki problem
+	 @  Have drinks with Laura tonight
+	 O  "Fixed" IS Wiki by migrating the information to a new site and changing the page layout references
+	 O  Received W-2 from Apex
+
+Jan. 17
+	 O  Figured out there is a difference between "Wiki Library" and "Enterprise Wiki." The two with very different purposes and uses. What is needed is to have an Enterprise Wiki since all of the content is formatted as such.
+	 @  Maybe plan out an updated resume and forward it to J. Goose. Follow up on what he needs from me for positions
+	 @  Make/Start making a matrix about where to move this summer. Plan out a road trip.
+	 @  Is there a need to be connected to the internet to use javascript, css, etc.?
+	 O  Went to Pennylane and then went to Blake's
+
+Jan. 18
+	 @  Helped Maggie move
+
+Jan. 19
+	[ ] Read
+	[ ] Buy some groceries
+	 O  Went to Harrison Street Cafe for lunch and read there for a bit.
+	 O  Went to Ellwoods and got groceries
+	 O  Created an OkCupid profile
+
+Jan. 20
+	[ ] Make soup for the week
+	[ ] Make payment on student loan
+	[ ] Email James Goose and see what's up
+	 @  Maybe experiment with creating a D3 matrix.
