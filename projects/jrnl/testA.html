@@ -18,10 +18,15 @@
 
     <style>
       body {
-        line-height: 16.0px;
+      }
+
+      .title {
+        width: 810px;
       }
 
       .pad {
+        line-height: 16.0px;
+
         height:650px;
         width: 810px;
 
@@ -74,46 +79,52 @@
   </head>
   <body>
     <div class="wrapper">
-
-      <div class="pad">
-        <div class="content" id="leftside">
-          <table class="day">
-            <tr><td></td><td>Jan. 13</td></tr>
-            <tr><td>[ ]</td><td>Migrate BSHR</td></tr>
-            <tr><td>[ ]</td><td>Sweep Room</td></tr>
-            <tr><td>[ ]</td><td>Pay last month's student loan</td></tr>
-            <tr><td>O</td><td>Beagn the BSHR migration. Added the aspx pages and images. Still working on linking them (as of 1pm still has problems). Table of contents is set</td></tr>
-            <tr><td>@</td><td>Have a drink with Laura this week</td></tr>
-            <tr><td>O</td><td>Have coffee with Maggie this week</td></tr>
-          </table>
+      <header>
+        <h1>Bullet Journal Implementation</h1>
+        <p>Bullet journaling is an analog form of journaling, note taking, and list creating developed by <a href="http://www.bulletjournal.com/">Ryder Carroll</a>. Here are a few prototype mockups for a digital implementation attempting to capture the analog spirit. </p>
+        <p class="view"><a href="../index.html">Home</a></p>
+      </header>
+      <section>
+        <div class="pad">
+          <div class="content" id="leftside">
+            <table class="day">
+              <tr><td></td><td>Jan. 13</td></tr>
+              <tr><td>[ ]</td><td>Migrate BSHR</td></tr>
+              <tr><td>[ ]</td><td>Sweep Room</td></tr>
+              <tr><td>[ ]</td><td>Pay last month's student loan</td></tr>
+              <tr><td>O</td><td>Beagn the BSHR migration. Added the aspx pages and images. Still working on linking them (as of 1pm still has problems). Table of contents is set</td></tr>
+              <tr><td>@</td><td>Have a drink with Laura this week</td></tr>
+              <tr><td>O</td><td>Have coffee with Maggie this week</td></tr>
+            </table>
+          </div>
+          <div class="content" id="rightside">
+            <p>
+              Jan. 17<br/>
+                 O  Figured out there is a difference between "Wiki Library" and "Enterprise Wiki." The two with very different purposes and uses. What is needed is to have an Enterprise Wiki since all of the content is formatted as such.<br/>
+                 @  Maybe plan out an updated resume and forward it to J. Goose. Follow up on what he needs from me for positions<br/>
+                 @  Make/Start making a matrix about where to move this summer. Plan out a road trip.<br/>
+                 @  Is there a need to be connected to the internet to use javascript, css, etc.?<br/>
+                 O  Went to Pennylane and then went to Blake's<br/>
+              <br/>
+              Jan. 18<br/>
+                 @  Helped Maggie move<br/>
+              <br/>
+              Jan. 19<br/>
+                [ ] Read<br/>
+                [ ] Buy some groceries<br/>
+                 O  Went to Harrison Street Cafe for lunch and read there for a bit.<br/>
+                 O  Went to Ellwoods and got groceries<br/>
+                 O  Created an OkCupid profile<br/>
+              <br/>
+              Jan. 20<br/>
+                [ ] Make soup for the week<br/>
+                [ ] Make payment on student loan<br/>
+                [ ] Email James Goose and see what's up<br/>
+                 @  Maybe experiment with creating a D3 matrix.<br/>
+            </p>
+          </div>
         </div>
-        <div class="content" id="rightside">
-          <p>
-            Jan. 17<br/>
-               O  Figured out there is a difference between "Wiki Library" and "Enterprise Wiki." The two with very different purposes and uses. What is needed is to have an Enterprise Wiki since all of the content is formatted as such.<br/>
-               @  Maybe plan out an updated resume and forward it to J. Goose. Follow up on what he needs from me for positions<br/>
-               @  Make/Start making a matrix about where to move this summer. Plan out a road trip.<br/>
-               @  Is there a need to be connected to the internet to use javascript, css, etc.?<br/>
-               O  Went to Pennylane and then went to Blake's<br/>
-            <br/>
-            Jan. 18<br/>
-               @  Helped Maggie move<br/>
-            <br/>
-            Jan. 19<br/>
-              [ ] Read<br/>
-              [ ] Buy some groceries<br/>
-               O  Went to Harrison Street Cafe for lunch and read there for a bit.<br/>
-               O  Went to Ellwoods and got groceries<br/>
-               O  Created an OkCupid profile<br/>
-            <br/>
-            Jan. 20<br/>
-              [ ] Make soup for the week<br/>
-              [ ] Make payment on student loan<br/>
-              [ ] Email James Goose and see what's up<br/>
-               @  Maybe experiment with creating a D3 matrix.<br/>
-          </p>
-        </div>
-      </div>
+      </section>
 
     </div>
     <script src="http://ajevann.github.io/javascripts/scale.fix.js"></script>
