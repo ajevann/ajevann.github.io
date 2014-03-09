@@ -17,16 +17,15 @@
     <![endif]-->
 
   <style type="text/css">
-    #sortable { 
-      list-style-type: none; 
-      padding:5px;
-
-      height:100%;
+    .wrapper {
+      width:1200px !important;
     }
 
-    #sortable li { 
+    li { 
       margin:5px;
       padding:5px;
+
+      width: 100px;
 
       border-radius:10px;
       font-size:12px;
@@ -34,7 +33,21 @@
 
     ul {
       margin:auto;
-      padding:auto;
+      padding:5px;
+
+      list-style-type: none; 
+
+      height:100%;
+    }
+
+    #master {
+      width: 750px;
+      float: left;
+    }
+
+    #projectdetails {
+      width: 400px;
+      float:right;
     }
 
     .red { background-color: #e74c3c; color: white; }
@@ -47,21 +60,6 @@
   <script type="text/javascript">
     $( document ).ready(function() {
 
-      /*
-      $("#task1").css('cursor', 'pointer').click(function() {
-        $("#task1").fadeOut( 1000 );
-      });
-      */
-
-      //Changing the layout for full screen
-      $("#resize").click(function() { 
-        $("header").animate({ opacity: "toggle" }, 1000);
-        $("footer").animate({ opacity: "toggle"  }, 1000);
-
-        var state = parseInt($("section").css("width"), 10) > 800;
-        $("section").animate({ width: (state ? 700 : 1000) }, 1000);
-      });
-
       //On click, give project details
       $("li").click(function(event) {
         $("#projectdetails").html("<h3>" + event.target.innerHTML + "</h3><p>Project Details</p>");
@@ -69,8 +67,8 @@
 
       //Allows the separate lists to share items.
       $(function() {
-        $( "#sortable, #sortable" ).sortable({
-          connectWith: ".connectedSortable"
+        $( "ul, ul" ).sortable({
+          connectWith: "ul"
         }).disableSelection();
       });
 
@@ -80,129 +78,115 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <h1>Alex Vann</h1>
-        <p></p>
-        <p class="view"><a href="https://github.com/ajevann">View My GitHub Profile</a></p>
-        <p class="view"><a href="../about.html">About</a></p>
-        <p class="view"><a href="../index.html">Projects</a></p>
-        <p class="view"><a href="../resume.html">Resume</a></p>
-        <p class="view"><a href="http://ajevann.tumblr.com/">Blog</a></p>
-      </header>
+      <h3>Workflow Status Matrix</h3>
+      <p><a href="../index.html">Back to Projects</a></p>
+      <p id="explaination">The idea behind this matrix is how to provide a simple display of your team, their projects, their projects' status, and any other information that could be relavent. Using this idea/tool can make planning your teams projects incredibly easier given the jQuery .sortable() functionality. I haven't decided on how to load and save the data (prehaps json) or how to create new items, but ideally, the matrix could be a simple site that users would navigate to, perhaps use multi-touch capabilities to allow easy and interactive manipulation.<br/></p>
+      <p></p>
 
-      <section>
-        <h3>Workflow Status Matrix</h3>
-        <p id="explaination">The idea behind this matrix is how to provide a simple display of your team, their projects, their projects' status, and any other information that could be relavent. Using this idea/tool can make planning your teams projects incredibly easier given the jQuery .sortable() functionality. I haven't decided on how to load and save the data (prehaps json) or how to create new items, but ideally, the matrix could be a simple site that users would navigate to, perhaps use multi-touch capabilities to allow easy and interactive manipulation.<br/></p>
-        <p><a id="resize">Change Size</a><br/></p>
+      <table border="1" id="master">
+        <col width="100"/>
+        <col width="151"/>
+        <col width="151"/>
+        <col width="151"/>
+        <col width="151"/>
 
-        <table border="1">
-          <col width="8%"/>
-          <col width="23%"/>
-          <col width="23%"/>
-          <col width="23%"/>
-          <col width="23%"/>
+        <tr>
+          <td></td>
+          <td>Reviewing</td>
+          <td>Developing</td>
+          <td>Testing</td>
+          <td>Deploying</td>
+        </tr>
 
-          <tr>
-            <td></td>
-            <td>Reviewing</td>
-            <td>Developing</td>
-            <td>Testing</td>
-            <td>Deploying</td>
-          </tr>
+        <tr>
+          <td>John</td>
+          <td>
+            <ul>
+              <li id="task1" class="red">01/13 - Project A</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li id="task2" class="red">01/09 - Project 2</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li id="task3" class="white">02/09 - Project 3</li>
+              <li id="task4" class="green">01/25 - Project 4</li>
+            </ul>
+          </td>
+        </tr>
 
-          <tr>
-            <td>John</td>
-            <td>
-              <ul id="sortable" class="connectedSortable">
-                <li id="task1" class="red">01/13 - Project A</li>
-              </ul>
-            </td>
-            <td>
-              <ul id="sortable" class="connectedSortable">
-                <li id="task2" class="red">01/09 - Project 2</li>
-              </ul>
-            </td>
-            <td>
-              <ul id="sortable" class="connectedSortable">
-              </ul>
-            </td>
-            <td>
-              <ul id="sortable" class="connectedSortable">
-                <li id="task3" class="white">02/09 - Project 3</li>
-                <li id="task4" class="green">01/25 - Project 4</li>
-              </ul>
-            </td>
-          </tr>
+        <tr>
+          <td>Jane</td>
+          <td>
+            <ul></ul>
+          </td>
+          <td>
+            <ul></ul>
+          </td>
+          <td>
+            <ul>
+              <li id="task5" class="green">02/03 - Project 5</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li id="task6" class="yellow">01/03 - Project 6</li>
+            </ul>
+          </td>
+        </tr>
 
-          <tr>
-            <td>Jane</td>
-            <td>
-              <ul id="sortable" class="connectedSortable"></ul>
-            </td>
-            <td>
-              <ul id="sortable" class="connectedSortable"></ul>
-            </td>
-            <td>
-              <ul id="sortable" class="connectedSortable">
-                <li id="task5" class="green">02/03 - Project 5</li>
-              </ul>
-            </td>
-            <td>
-              <ul id="sortable" class="connectedSortable">
-                <li id="task6" class="yellow">01/03 - Project 6</li>
-              </ul>
-            </td>
-          </tr>
+        <tr>
+          <td>Rachel</td>
+          <td>
+            <ul></ul>
+          </td>
+          <td>
+            <ul>
+              <li id="task7" class="red">01/14 - Project 7</li>
+              <li id="task8" class="yellow">01/19 - Project 8</li>
+            </ul>
+          </td>
+          <td>
+            <ul></ul>
+          </td>
+          <td>
+            <ul></ul>
+          </td>
+        </tr>
 
-          <tr>
-            <td>Rachel</td>
-            <td>
-              <ul id="sortable" class="connectedSortable"></ul>
-            </td>
-            <td>
-              <ul id="sortable" class="connectedSortable">
-                <li id="task7" class="red">01/14 - Project 7</li>
-                <li id="task8" class="yellow">01/19 - Project 8</li>
-              </ul>
-            </td>
-            <td>
-              <ul id="sortable" class="connectedSortable"></ul>
-            </td>
-            <td>
-              <ul id="sortable" class="connectedSortable"></ul>
-            </td>
-          </tr>
+        <tr>
+          <td>Dan</td>
+          <td>
+            <ul>
+              <li id="task9" class="white">01/17 - Project 9</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li id="task10" class="green">01/23 - Project 10</li>
+            </ul>
+          </td>
+          <td>
+            <ul></ul>
+          </td>
+          <td>
+            <ul></ul>
+          </td>
+        </tr>
 
-          <tr>
-            <td>Dan</td>
-            <td>
-              <ul id="sortable" class="connectedSortable">
-                <li id="task9" class="white">01/17 - Project 9</li>
-              </ul>
-            </td>
-            <td>
-              <ul id="sortable" class="connectedSortable">
-                <li id="task10" class="green">01/23 - Project 10</li>
-              </ul>
-            </td>
-            <td>
-              <ul id="sortable" class="connectedSortable"></ul>
-            </td>
-            <td>
-              <ul id="sortable" class="connectedSortable"></ul>
-            </td>
-          </tr>
+      </table>
 
-        </table>
+      <div id="newproject"></div>
+      <div id="projectdetails"></div>
 
-        <div id="projectdetails"></div>
 
-      </section>
-
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a>
-        </br>Modified by <a href="https://github.com/ajevann">ajevann</small></p>
-      </footer>
     </div>
     <script src="http://ajevann.github.io/javascripts/scale.fix.js"></script>
     
