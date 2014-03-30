@@ -25,7 +25,7 @@
       margin:5px;
       padding:5px;
 
-      width: 100px;
+      width: 90%;
 
       border-radius:10px;
       font-size:12px;
@@ -41,13 +41,13 @@
     }
 
     #master {
-      width: 750px;
+      width: 100%;
       float: left;
     }
 
     #projectdetails {
-      width: 400px;
-      float:right;
+      width: 600px;
+      float:left;
     }
 
     .red { background-color: #e74c3c; color: white; }
@@ -62,7 +62,7 @@
 
       //On click, give project details
       $("li").click(function(event) {
-        $("#projectdetails").html("<h3>" + event.target.innerHTML + "</h3><p>Project Details</p>");
+        $("#projectdetails").html("<h3>" + event.target.innerHTML + "</h3><p>Project Details<br/>Praesent rhoncus ante massa, at viverra ante placerat eget. Curabitur et lobortis magna. Suspendisse mattis tempor commodo. Praesent placerat sapien arcu, a luctus nisl feugiat sit amet. Nunc quis aliquam odio. Duis id viverra dui. Fusce nec dolor id dolor cursus scelerisque vel id lorem. Nunc non arcu id enim sodales consectetur a ut turpis. Aliquam erat volutpat. Quisque ullamcorper arcu eu dignissim tincidunt. Pellentesque magna augue, aliquet vel lectus ut, aliquam convallis diam.</p>");
       });
 
       //Allows the separate lists to share items.
@@ -84,11 +84,7 @@
       <p></p>
 
       <table border="1" id="master">
-        <col width="100"/>
-        <col width="151"/>
-        <col width="151"/>
-        <col width="151"/>
-        <col width="151"/>
+        <col width="100px"/>
 
         <tr>
           <td></td>
