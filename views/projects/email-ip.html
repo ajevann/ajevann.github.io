@@ -1,0 +1,84 @@
+<div ng-include src="'app/partials/header.html'"></div>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-12 col-md-12">
+      <h3>Emailing your IP Address</h3>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+      <p>Travelling abroad I came across a simple problem that I had not forseen. I needed to get a specific file from my desktop (a comic book if you must know) but I had no way to connect to it. Of course, having cloud space would be useful, however, I use my dropbox account really only for important things like copies of professional documents or things I needed to protect from hardware problems and still be able to grab a copy wherever I am.</p>
+      
+      <p>So that got me thinking, and since I was just learning python, I decided to try my hand at writing a simple script that would send a copy of my desktop's IP address by email to me. But that introduced a whole other set of possibilities and questions. When to send the IP address? How regularily? What if emails become abnoxious?</p>
+      
+      <p>I settled on the following solution: Have the computer record the IP address when booting up (How to regulate when the desktop turns on?), save a copy of the IP address somewhere accessible (Dropbox?), email the address to a personal email accoun. Here's the implementation,</p>
+
+      <p>First off, since I was using a basic cronjob that would execute the script when ever the computer turned on, I needed to make sure that enough time had elapsed so that the script had enough time to establish an internet connection (I also set my desktop to turn on/off on a regular basis using System Preferences). Then I simply recorded the time for later purposes.
+      </br>I then used a socket object that connected to a website, in this case gmail.com, and then grabbed the IP address by executing <code>socket.getsockname()</code>. This seemed to be the simplest solution that did require any parsing or sifting through string data, since it returns the socket's own address.
+      </p>
+    </div>
+    <div class="col-sm-12 col-md-4">
+<pre><code>time.sleep(60)
+
+localtime = time.asctime( 
+  time.localtime(time.time()) ) 
+
+s = socket.socket(
+  socket.AF_INET, socket.SOCK_DGRAM)
+s.connect(("gmail.com",80))
+ip = s.getsockname()[0]
+s.close()
+
+msg = 'IP Address for iMac\n'
+msg += str(localtime)
+msg += '\n'
+msg += str(ip)
+</code></pre>
+    </div>
+  </div>
+<hr>
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+      <p>The next part was purely because after awhile I became annoyed with incessant emails when I was at home, so I simply decided to create/update a file in my dropbox that would contain the emails contents.</p>
+    </div>
+    <div class="col-sm-12 col-md-4">
+<pre><code>open('User/ipaddress.txt','w')
+  .close()
+f = open('User/ipaddress.txt', 'r+')
+f.write(msg)
+</code></pre>
+    </div>
+  </div>
+<hr>
+    <div class="row">
+      <div class="col-sm-12 col-md-8">
+        <p>Lastly, I took the message's contents and created a connection to gmail's servers, logged in under my own email account, sent the message to myself, and closed everything up.</p>
+      </div>
+
+      <div class="col-sm-12 col-md-4">
+<pre><code>server 
+  = smtplib.SMTP('smtp.gmail.com',587) 
+  #port 465 or 587
+server.ehlo()
+server.starttls()
+server.ehlo()
+server.login(
+  'your@email.com','password')
+server.sendmail(
+  'you@email.com','your@email.com',msg)
+server.close()
+</code></pre>
+      </div>
+    </div>
+<hr>
+    <div class="row">
+      <div class="col-sm-12">
+        <p>I still use this code everyday whenever I'm away from home. Absolutely useful to use the IP address to use Cyberduck or FileZilla and send/recieve files to and from my desktop to wherever I am. I know there are better options out there, this was simply a small project that helped solve an issue I had.</p>
+      </div>
+    </div>
+</div>
+
+<div ng-include src="'app/partials/footer.html'"></div>

@@ -1,0 +1,15 @@
+<div ng-include src="'app/partials/header.html'"></div>
+<div class="container">
+
+  <div class="row" ng-repeat="projectGroup in projects">
+    <div class="col-xs-12 col-sm-6 col-md-4 project-container" ng-repeat="project in projectGroup | filter:query | orderBy:orderProp">
+      <h4>
+        <a href="{{project.link}}"><h4 ng-bind-html="project.title"></h4></a>
+      </h4>
+      <p ng-bind-html="project.desc"></p>
+      <br/>
+
+    </div>
+  </div>
+</div>
+<div ng-include src="'app/partials/footer.html'"></div>

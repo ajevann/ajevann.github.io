@@ -1,0 +1,35 @@
+[{
+  "link": "projects/teamstatus.html",
+  "title": "Workflow Status Matrix",
+  "desc": "How to display team members workload, status, and content without being bogged down by an excel spreadsheet. Working with jQuery's UI and other functionality.",
+  "tags": [
+    {"tag":"jQuery"}
+  ]
+}, {
+  "link": "resume-visualizations",
+  "title": "Different Ways to Visualize a Programmer's Resume",
+  "desc": "A few simple ways that a programmer can showcase their work experience correlated with their programming knowledge.",
+  "tags": [
+    {"tag":"Javascript"},
+    {"tag":"HTML"}
+  ]
+}, {
+  "link": "iframe-alternative",
+  "title": "Using iFrames as an alternative to PHP include",
+  "desc": "Attempt and ongoing tinkering with iFrames and how they can be used to include refined html pages all while keeping a consistent look and feel to the site. Specifically, when PHP is not an option.",
+  "tags": [
+    {"tag":"Javascript"},
+    {"tag":"HTML"}
+  ]
+}, {
+  "link": "drwho",
+  "title": "Disasters and Dr. Who",
+  "desc": "An 'entertaining' page that illustrates the TARDIS' 'reliable' navigation. Uses a collection of disasters and aliens in json lists and then randomly matches aliens with events along with whooshing sounds and fade ins.",
+  "tags": [
+    {"tag":"Javascript"}
+  ]
+}, {
+  "link": "projects/2012GEOG2064.html",
+  "title": "Global Economics and World Politics, Writing Samples",
+  "desc": "A collection of essays written for a college class based on how the global economy evolved and the politics and infrastructure that shaped it."
+}]

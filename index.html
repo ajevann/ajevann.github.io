@@ -1,87 +1,25 @@
 <!doctype html>
-<html>
+<html lang="en" ng-app="ajevannApp">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>ajevann by ajevann for ajevann</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Untitled</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="author" href="humans.txt">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap.min.js"></script>
 
+    <script src="app/app.js"></script>
+    <script src="app/controllers/controllers.js"></script>
   </head>
   <body>
-    <div class="wrapper">
-
-      <header>
-        <h1>Alex Vann</h1>
-        <p></p>
-        <p class="view"><a href="https://github.com/ajevann">GitHub</a></p>
-        <p class="view"><a href="about.html">About</a></p>
-        <p class="view"><a href="index.html">Projects</a></p>
-        <p class="view"><a href="resume.html">Resume</a></p>
-        <!-- <p class="view"><a href="http://ajevann.tumblr.com/">Blog</a></p> -->
-      </header>
-
-      <section>
-        <h3>Projects & Work</h3>
-
-        <p><a href="rfp">Refined Reddit Front Page</a>
-          <br>Incredibly minimalistic Reddit front page. Specific subreddits are hardcoded to display only stories (pulled from Reddits JSON API) expected to be informative and beneficial as opposed to merely entertaining like r/funny or r/awww. Built with AngularJS and\ Bootstrap</p>
-
-        <p><a href="http://symplie.com/">Symplie Chrome Extensions</a>
-          <br>A side project started with an old college roommate, creating simple chrome extensions for folks to use.</p>
-
-        <p><a href="projects/euler.html">A Couple of Euler Problems</a>
-          <br>Some simple writeups for answers to problems from <a href="https://projecteuler.net/">Project Euler</a>.</p>
-
-        <p><a href="projects/teamstatus.html">Workflow Status Matrix</a>
-          <br>How to display team members workload, status, and content without being bogged down by an excel spreadsheet. Working with jQuery's UI and other functionality.</p>
-
-        <p><a href="resume-visualizations">Different Ways to Visualize a Programmer's Resume</a>
-          <br>A few simple ways that a programmer can showcase their work experience correlated with their programming knowledge.</p>
-
-        <p><a href="close-encounters">Work in Progress... Interactive Close Encounters Music Board</a>
-          <br>A simple and silly little project to work on my javascript/jQuery skills. Uses some sweet and dorky math to set up an array of musical notes, create colors for them, and play specific tones when they are clicked. Find the specific note and you'll set off the Close Encounters theme.</p>
-
-        <p><a href="iframe-alternative">Using iFrames as an alternative to PHP include</a>
-          <br>Attempt and ongoing tinkering with iFrames and how they can be used to include refined html pages all while keeping a consistent look and feel to the site. Specifically, when PHP is not an option.</p>
-
-        <p><a href="website-visualization">Website Visualization Experiementation</a>
-          <br>Some experiementing (primarily with D3 code) I'm currently doing on how to take a different look at how a website is structured. The idea came about while I was explaining to my folks how a webpage's code is laid out. I also have been toying with the idea to create a resume based on tree structure. Using stock code from the d3.js website and combining it with json, the inherent tree structure of a website can be properly visualized.</p>
-
-        <p><a href="drwho">Disasters and Dr. Who</a>
-          <br>An "entertaining" page that illustrates the TARDIS' "reliable" navigation. Uses a collection of disasters and aliens in json lists and then randomly matches aliens with events along with whooshing sounds and fade ins.</p>
-
-        <p><a href="projects/emailip.html">Emailing your IP Address</a>
-          <br>A simple explanation of a python script I used to send my desktop's IP address to me by email.</p>
-
-        <p><a href="projects/CSSViewer.html">CSS Viewer</a>
-          <br>A simple (a rough draft) program designed to convert CSS files and information into a CSV file so that syntactically-correct mistakes can be spotted easily.</p>
-
-        <p><a href="https://code.google.com/p/cs-3724-group1/">Human Computer Interaction Project &mdash; Basketball Event Tracking Interface</a>
-          <br>A project designed to study a simulated problem (recording basketball scores quickly and efficiently), research the different aspects that create the issue, then create a proof of concept that can be quantitatively shown to be an improvement to the issue.</p>
-
-        <p><a href="https://github.com/ajevann/CS4634/">Design of Information Capstone Project &mdash; Interactive Hallway Display</a>
-          <br>A general overview of my capstone group project, focused on designing and creating a proof of concept for a innovative visualization of information at the Virginia Tech Research Center &mdash; Arlington, Virginia.</p>
-
-        <p><a href="projects/2012GEOG2064.html">Global Economics and World Politics, Writing Samples</a>
-          <br>A collection of essays written for a college class based on how the global economy evolved and the politics and infrastructure that shaped it.</p>
-
-        <p></p><p><strong>Disclaimer:</strong> Most of the projects above were developed with Google Chrome and may not work on other browsers.</p>
-      </section>
-
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a>
-        </br>Modified by <a href="https://github.com/ajevann">ajevann</small></p>
-      </footer>
-
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-
+    <div ng-view></div>
   </body>
 </html>
