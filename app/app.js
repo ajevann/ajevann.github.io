@@ -4,8 +4,8 @@ var ajevannApp = angular.module('ajevannApp', [
   'ajevannControllers'
 ]);
 
-ajevannApp.config(['$routeProvider',
-  function($routeProvider) {
+ajevannApp.config(['$routeProvider', '$locationProvider', 
+  function($routeProvider, $locationProvider) {
     $routeProvider.
       when('/', {
         templateUrl: 'views/projects-list.html',
@@ -28,10 +28,6 @@ ajevannApp.config(['$routeProvider',
       when('/euler', {
         templateUrl: 'views/projects/euler.html',
       }).
-      when('/project/:projectId', {
-        templateUrl: 'views/projects/{{projectId}}.html',
-        controller: 'ProjectDetailCtrl'
-      }).
       when('/about', {
         templateUrl: 'views/about.html'
       }).
@@ -41,10 +37,9 @@ ajevannApp.config(['$routeProvider',
       when('/404', {
         templateUrl: 'views/404.html'
       }).
-      when('/landing', {
-        templateUrl: 'views/landing.html'
-      }).
       otherwise({ /*replace with 404 later*/
         redirectTo: '404'
       });
+
+      $locationProvider.html5Mode(true);
   }]);
