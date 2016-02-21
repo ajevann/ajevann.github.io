@@ -41,5 +41,4 @@ ajevannApp.config(['$routeProvider', '$locationProvider',
         redirectTo: '404'
       });
 
-      $locationProvider.html5Mode(true);
   }]);
