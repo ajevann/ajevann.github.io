@@ -6,6 +6,7 @@ var ajevannApp = angular.module('ajevannApp', [
 
 ajevannApp.config(['$routeProvider', '$locationProvider', 
   function($routeProvider, $locationProvider) {
+
     $routeProvider.
       when('', {
         templateUrl: 'views/projects-list.html',
@@ -48,4 +49,7 @@ ajevannApp.config(['$routeProvider', '$locationProvider',
       otherwise({ /*replace with 404 later*/
         redirectTo: '404'
       });
+
+    $locationProvider.html5Mode(true);
+    
   }]);
