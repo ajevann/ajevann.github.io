@@ -11,6 +11,14 @@ ajevannApp.config(['$routeProvider', '$locationProvider',
         templateUrl: 'views/projects-list.html',
         controller: 'ProjectListCtrl'
       }).
+      when('/', {
+        templateUrl: 'views/projects-list.html',
+        controller: 'ProjectListCtrl'
+      }).
+      when('#', {
+        templateUrl: 'views/projects-list.html',
+        controller: 'ProjectListCtrl'
+      }).
       when('/projects', {
         templateUrl: 'views/projects-list.html',
         controller: 'ProjectListCtrl'
