@@ -32,7 +32,7 @@
   <div class="row">
     <div class="col-sm-12">
       <p>That is, 3 + 7 + 4 + 9 = 23.<br/>
-      Find the maximum total from top to bottom in <a href="#/assets/extras/p_067_data.txt">p_067_data.txt</a>, a 15K text file containing a triangle with one-hundred rows.</p>
+      Find the maximum total from top to bottom in <a href="/assets/extras/p_067_data.txt">p_067_data.txt</a>, a 15K text file containing a triangle with one-hundred rows.</p>
       <p>Approach...<br/>
         Beginning from the top and creating a tree-like path towards the bottom can quickly be seen as being an inefficient way to find the solution. At first glance, it appears that there are 2^99 possible paths to find the solution (though don't quote me on that). So how to begin to solve this problem? Without using brute force we are left with beginning at the bottom. The benefit of this approach is that paths are weeded out by being compared to neighboring paths, leaving only the largest paths to continue on.<br/>
         Programmatically, I inputed the data (with some parsing) into an array which I then traversed from the bottom up. The number at the top of the "pyramid" array is the max sum path.

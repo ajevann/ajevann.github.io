@@ -23,7 +23,7 @@
       {"tag":"NodeJS"}
     ]
   }, {
-    "link": "#/euler",
+    "link": "/euler",
     "title": "A Couple of Euler Problems",
     "desc": "Some simple writeups for answers to problems from Project Euler.",
     "tags": [
@@ -46,7 +46,7 @@
       {"tag":"D3.js"}  
     ]
   }, {
-    "link": "#/emailip",
+    "link": "/emailip",
     "title": "Emailing your IP Address",
     "desc": "A simple explanation of a python script I used to send my desktop's IP address to me by email.",
     "tags": [
@@ -54,7 +54,7 @@
       {"tag":"Python"}
     ]
   }, {
-    "link": "#/css-viewer",
+    "link": "/css-viewer",
     "title": "CSS Viewer",
     "desc": "A simple (a rough draft) program designed to convert CSS files and information into a CSV file so that syntactically-correct mistakes can be spotted easily.",
     "tags": [
