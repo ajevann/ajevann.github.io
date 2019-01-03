@@ -37,28 +37,6 @@ ajevannApp.config(['$routeProvider', '$locationProvider',
         templateUrl: 'views/projects-list.html',
         controller: 'ProjectListCtrl'
       }).
-      when('/public/projects', {
-        templateUrl: 'views/projects-list.html',
-        controller: 'ProjectListCtrl'
-      }).
-      when('/public/css-viewer', {
-        templateUrl: 'views/projects/css-viewer.html',
-      }).
-      when('/public/emailip', {
-        templateUrl: 'views/projects/email-ip.html',
-      }).
-      when('/public/euler', {
-        templateUrl: 'views/projects/euler.html',
-      }).
-      when('/public/about', {
-        templateUrl: 'views/about.html'
-      }).
-      when('/public/resume', {
-        templateUrl: 'views/resume.html'
-      }).
-      when('/public/404', {
-        templateUrl: 'views/404.html'
-      }).
       otherwise({ /*replace with 404 later*/
         redirectTo: '404'
       });
